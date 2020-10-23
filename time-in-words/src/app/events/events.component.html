@@ -1,0 +1,33 @@
+<p>Event Dashboard</p>
+
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Date</th>
+        <th>Hour</th>
+        <th>Minute</th>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let event of events">
+            {{ event.id }} 
+            <td>
+                {{ event.name }}
+            </td>
+            <td>
+                {{ event.location }}
+            </td>
+            <td>
+                {{ event.date }}
+            </td>
+            <td>
+                {{ event.hourWord }}
+            </td>
+            <td>
+                {{ event.minuteWord }}
+            </td>
+        </tr>
+        
+    </tbody>
+</table>
