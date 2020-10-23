@@ -28,3 +28,17 @@
         
     </tbody>
 </table>
+<div>
+    <form onsubmit="getTimeInWords(hour, minute)">
+        <label for="hour">Hour:</label><br>
+        <input class="form-control" id="hour" required
+            [(ngModel)]="this.hour" name="hour"><br><br>
+        <label for="minute">Minute:</label><br>
+        <input class="form-control" id="minute" required
+            [(ngModel)]="this.minute" name="minute"><br><br>
+            <input type="submit" value="Submit">
+      </form> 
+    
+</div>
+<div>Time in Words below!</div>
+<div>{{ timeInWords }}</div>
