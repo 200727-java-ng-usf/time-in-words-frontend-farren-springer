@@ -22,4 +22,10 @@ export class EventService {
     console.log("URL: "+`${env.API_URL}/events`);
     return this.http.get(`${env.API_URL}/events`,{responseType:'json',observe:"response"});
   }
+
+  getTimeInWords(hour: number, minute: number) {
+    console.log("Fetching from backend...")
+    console.log("URL: "+`${env.API_URL}/events/timeinwordscustom/hour/${hour}/minute/${minute}`);
+    return this.http.get(`${env.API_URL}/events/timeinwordscustom/hour/${hour}/minute/${minute}`,{responseType:'json',observe:"response"});
+  }
 }
