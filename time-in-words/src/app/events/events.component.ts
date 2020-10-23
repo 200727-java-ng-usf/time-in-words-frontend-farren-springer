@@ -12,7 +12,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class EventsComponent implements OnInit {
  
   events;
-  
+  timeInWords;
+  hour = 2;
+  minute = 20;
   
   constructor( private eventService: EventService) {
     this.eventService.getAllEvents().subscribe(
@@ -22,11 +24,24 @@ export class EventsComponent implements OnInit {
       err => {console.log(err.status);} 
     );
 
+    console.log('Hour: ' + this.hour);
+    console.log('Minute: ' + this.minute);
+    this.eventService.getTimeInWords(this.hour, this.minute).subscribe(
+      resp => {
+        this.timeInWords = resp.body;
+      },
+      err => {console.log(err.status);}
+    );
+    console.log('Time in Words: ' + this.timeInWords);
+    
   }
 
   ngOnInit(): void {
 
+    
+
   }
 
   
+
   }
