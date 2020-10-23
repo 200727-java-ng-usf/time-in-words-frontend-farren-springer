@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "time-in-words"
+    }
+  },
+  "defaultProject": "time-in-words",
+  "cli": {
+    "analytics": "2e16a275-7651-4c3a-abd6-93b142ac4508"
+  }
 }
