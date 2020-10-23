@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EventService } from '../services/event.service';
 import { Event } from '../models/event';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class EventsComponent implements OnInit {
  
   events;
   timeInWords;
-  hour = 2;
+  hour = 2; // initialized to test the URL picks up this value
   minute = 20;
   
   constructor( private eventService: EventService) {
