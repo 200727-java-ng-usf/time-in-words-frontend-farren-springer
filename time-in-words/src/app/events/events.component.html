@@ -1,0 +1,45 @@
+<p>Event Dashboard</p>
+
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Date</th>
+        <th>Time in Words</th>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let event of events">
+            {{ event.id }} 
+            <td>
+                {{ event.name }}
+            </td>
+            <td>
+                {{ event.location }}
+            </td>
+            <td>
+                {{ event.date }}
+            </td>
+            <td>
+                {{ event.hourWord }}
+            </td>
+            
+        </tr>
+        
+    </tbody>
+</table>
+<div>
+    <form>
+        <label for="hour">Hour:</label><br>
+        <input [(ngModel)]="hour" name="hour" value="{{hour}}"><br><br>
+        <label for="minute">Minute:</label><br>
+        <input [(ngModel)]="minute" name="minute" value={{minute}}><br><br>
+      </form> 
+    
+</div>
+<div>Time in Words below!</div>
+<div>For now, visit this URL to see the time you entered in words:</div>
+<div>http://localhost:8081/events/timeinwordscustom/hour/{{hour}}/minute/{{minute}}</div>
+<div>{{ timeInWords }}</div>
+<p>{{ hour }}</p>
+<p>{{ minute }}</p>
