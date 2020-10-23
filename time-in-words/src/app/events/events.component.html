@@ -6,8 +6,7 @@
         <th>Name</th>
         <th>Location</th>
         <th>Date</th>
-        <th>Hour</th>
-        <th>Minute</th>
+        <th>Time in Words</th>
     </thead>
     <tbody>
         <tr *ngFor = "let event of events">
@@ -24,9 +23,7 @@
             <td>
                 {{ event.hourWord }}
             </td>
-            <td>
-                {{ event.minuteWord }}
-            </td>
+            
         </tr>
         
     </tbody>
