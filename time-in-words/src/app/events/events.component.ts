@@ -28,22 +28,5 @@ export class EventsComponent implements OnInit {
 
   }
 
-  // showAllUsers(): void{
-     
-  //   this.userService.getAllUsers().subscribe( 
-  //     resp=>{ 
-  //         console.log("resp.body: "+resp.body);
-  //         let respJSON = resp.body;
-          
-          
-  //     },
-  //     err=>{
-  //         console.log(err.status);
-  //     }
-  // );
-
-    //then show the div
-    // this.revealUsers();
-    // return userArray;
+  
   }
-// }
